@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green_bg" translatesAutoresizingMaskIntoConstraints="NO" id="LCT-2U-epR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Amount" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CpQ-eO-Gs6">
+                                <rect key="frame" x="115" y="134.5" width="90" height="36"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.10000000000000001" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="yWx-VV-sWq"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IXo-8Q-S3z">
+                                <rect key="frame" x="48" y="260.5" width="224" height="42"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="26Y-8N-d31"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Calculate Tax">
+                                    <color key="titleColor" red="0.43137254901960786" green="0.54117647058823526" blue="0.55294117647058827" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cI7-J0-Keb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y7-Jb-P1V">
+                                <rect key="frame" x="16" y="60" width="288" height="50.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="AWV-Xx-m6S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="26"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="WgE-Og-Nxg">
+                                <rect key="frame" x="48" y="198.5" width="224" height="33"/>
+                                <color key="backgroundColor" white="1" alpha="0.10000000000000001" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="jXK-GZ-trB"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NY"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eV-6m-Xqu">
+                                <rect key="frame" x="47" y="134" width="64" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="WhK-02-Yl8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="IXo-8Q-S3z" secondAttribute="trailing" constant="48" id="1YE-AC-Pta"/>
+                            <constraint firstItem="9eV-6m-Xqu" firstAttribute="top" secondItem="5Y7-Jb-P1V" secondAttribute="bottom" constant="23" id="4dX-WU-glb"/>
+                            <constraint firstItem="5Y7-Jb-P1V" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="5Q7-L0-VIQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="LCT-2U-epR" secondAttribute="bottom" id="DOa-4Z-QU5"/>
+                            <constraint firstItem="9eV-6m-Xqu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="47" id="F1I-g8-XcS"/>
+                            <constraint firstAttribute="trailing" secondItem="WgE-Og-Nxg" secondAttribute="trailing" constant="48" id="HFV-sS-viu"/>
+                            <constraint firstItem="WgE-Og-Nxg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="48" id="K7L-8j-vax"/>
+                            <constraint firstItem="WgE-Og-Nxg" firstAttribute="top" secondItem="CpQ-eO-Gs6" secondAttribute="bottom" constant="28" id="OUB-Jy-ics"/>
+                            <constraint firstItem="LCT-2U-epR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Tri-gZ-PJd"/>
+                            <constraint firstItem="IXo-8Q-S3z" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="48" id="Vvh-M3-WRS"/>
+                            <constraint firstItem="5Y7-Jb-P1V" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="XKS-8K-q98"/>
+                            <constraint firstItem="LCT-2U-epR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Yos-vS-Y3r"/>
+                            <constraint firstAttribute="trailing" secondItem="5Y7-Jb-P1V" secondAttribute="trailing" constant="16" id="aJa-Ts-lTw"/>
+                            <constraint firstAttribute="trailing" secondItem="CpQ-eO-Gs6" secondAttribute="trailing" constant="115" id="dIt-es-2vd"/>
+                            <constraint firstItem="CpQ-eO-Gs6" firstAttribute="leading" secondItem="9eV-6m-Xqu" secondAttribute="trailing" constant="4" id="kqu-a9-GcJ"/>
+                            <constraint firstItem="IXo-8Q-S3z" firstAttribute="top" secondItem="WgE-Og-Nxg" secondAttribute="bottom" constant="30" id="mRe-SW-Wqz"/>
+                            <constraint firstItem="CpQ-eO-Gs6" firstAttribute="top" secondItem="5Y7-Jb-P1V" secondAttribute="bottom" constant="24" id="sFY-HS-HUg"/>
+                            <constraint firstItem="CpQ-eO-Gs6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="115" id="xGZ-wh-Bla"/>
+                            <constraint firstAttribute="trailing" secondItem="LCT-2U-epR" secondAttribute="trailing" id="zAV-hF-CYq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calculateButton" destination="IXo-8Q-S3z" id="Ivp-db-xGz"/>
+                        <outlet property="priceTextField" destination="CpQ-eO-Gs6" id="lUh-bz-VgC"/>
+                        <outlet property="resultLabel" destination="5Y7-Jb-P1V" id="ZDk-we-urX"/>
+                        <outlet property="segmentedControl" destination="WgE-Og-Nxg" id="YyK-Oh-67D"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="234" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="green_bg" width="160" height="284"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
